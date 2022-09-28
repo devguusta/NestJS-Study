@@ -14,8 +14,8 @@ import { AuthDto } from "./dto";
  }
 
  @Post('signin')
- signin(){
+ signin(@Body() dto: AuthDto){
 
-    return this.authService.signin();
+    return this.authService.signin(dto);
  }
  }
