@@ -24,7 +24,8 @@ export class  AuthService{
         console.log(oldUser);
         if(oldUser){
             throw new BadRequestException({
-                message: "User already exists"
+                message: "User already exists",
+                statusCode: 400,
             })
         }
 
